@@ -14,7 +14,7 @@ import sys
 from time import sleep
 
 
-def download_proxy(): # you can add link of proxy many as you want if you can.
+def scrape_proxy(): # you can add link of proxy many as you want if you can.
     global out_file
     # print("\nScraping Proxies...\n")
     f = open(out_file, 'wb')
@@ -141,7 +141,7 @@ def run():
     url = url.split('//')[1]
 
     print("\nScraping Proxy...", end="\r")
-    download_proxy()
+    scrape_proxy()
     proxies = open(str(out_file)).readlines()
     print("Fixing Proxy...", end="\r")
     fix_proxy(out_file)
