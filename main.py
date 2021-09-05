@@ -108,6 +108,7 @@ def check_proxy(lines, socks_type, ms): # check if proxy works
                 s = ctx.wrap_socket(s, server_hostname=url)
             s.send(str.encode("GET / HTTP/1.1\r\n\r\n"))
             s.close()
+            print(proxy[0] + proxy[1] + "works!")
             break
         except:
             err += 1
